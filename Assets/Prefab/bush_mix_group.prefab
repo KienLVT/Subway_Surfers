@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1929500371812341}
+  m_IsPrefabParent: 1
+--- !u!1 &1929500371812341
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4479163552321824}
+  - 65: {fileID: 65988724506407806}
+  - 54: {fileID: 54239500118922649}
+  - 114: {fileID: 114065020064631919}
+  m_Layer: 10
+  m_Name: bush_mix_group
+  m_TagString: BushStumble
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4479163552321824
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929500371812341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4736897705275047}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &65988724506407806
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929500371812341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 17.006128, y: 5, z: 10.362533}
+  m_Center: {x: 0, y: 2.5, z: -0.45}
+--- !u!54 &54239500118922649
+Rigidbody:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929500371812341}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114065020064631919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929500371812341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cc6c1437e37b0f09558201b6392a4e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnPoolType: 7
+  PreloadAmount: 1
+  PreloadTime: 0
+  PreloadFrames: 2
+  PreloadDelay: 0
+  LimitInstances: 0
+  LimitAmount: 100
+  LimitFIFO: 0
+  CullDespawned: 0
+  CullAbove: 50
+  CullDelay: 60
+  CullMaxPerPass: 5
+  SendLifecycleMessages: 0
+  LogMessages: 0
+--- !u!1 &1373388262460373
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4736897705275047}
+  - 114: {fileID: 114731201569162713}
+  - 114: {fileID: 114942450767697569}
+  - 114: {fileID: 114228149299646541}
+  - 114: {fileID: 114938623105257877}
+  - 114: {fileID: 114232587186481448}
+  m_Layer: 0
+  m_Name: bush_mix_gen_group_place
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4736897705275047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4479163552321824}
+  m_RootOrder: 0
+--- !u!114 &114731201569162713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a580029b653ee3630cfce0f53544d4, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114942450767697569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd544be5f942a896b2726ad6b053840c, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114228149299646541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9ab40f8d037cef6043bc2ad5219d46, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _prefab: {fileID: 4242422154354087, guid: edc8ced3ca3d6914d8dd5b0f1ca0427c, type: 2}
+  MinDevicePerformance: 0
+--- !u!114 &114938623105257877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795756bccd0c4123d54c621bc0b4d9d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114232587186481448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373388262460373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b202559ab02de33f4de9de486c7a07f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _spawnOnceOnStart: 0
+  _spawnProbability: 1
+  _locatedInIntro: 0
+  _dontSpawnInIntro: 0
+  _combineModelsInstantly: 0

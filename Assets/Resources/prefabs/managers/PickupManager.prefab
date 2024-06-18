@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1587580526681032}
+  m_IsPrefabParent: 1
+--- !u!1 &1587580526681032
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4782073484459133}
+  - 114: {fileID: 114389664678686747}
+  m_Layer: 0
+  m_Name: PickupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4782073484459133
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587580526681032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114389664678686747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587580526681032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8203c62ce857d6ede747046241419e2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _willShowPickupSpawnPointGizmos: 0
+  _willDebugLogPickers: 0
+  _willDebugLogPickupManager: 0
+  _willDebugLogPickupData: 0
+  _willDebugLogPickerData: 0
+  _willDebugLogBadCollisions: 1
+  _willRewardUponPickupCollected: 1
+  _pickupSpawnPointPrefab: {fileID: 1625093757114147, guid: 0cf60568531dd22498b783f2398aac36, type: 2}
+  _pickupManagerConfiguration: {fileID: 11400000, guid: dd065d940c4928348acea331c5c9a5ba, type: 2}
+  _spawnDistanceMinToGameStart: 250
+  _pickupDataList:
+  - _pickupType: 1
+    _pickupIconPrefab: {fileID: 1556928382302268, guid: c7d7f8e527ebcee46a6fd2ff84fe0528, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: -3
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 600
+    _spawnWeight: 0.02
+  - _pickupType: 2
+    _pickupIconPrefab: {fileID: 1347098633032303, guid: e87435b4cbdce4447a2075ab69d80a89, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 0.29
+  - _pickupType: 4
+    _pickupIconPrefab: {fileID: 1737581466717120, guid: 51874fa6f81a3bb42ac7905a41d431a4, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 0.26
+  - _pickupType: 8
+    _pickupIconPrefab: {fileID: 1248749825756777, guid: 3f4717816c801fa409bd58c4a4d97d64, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1000
+    _spawnWeight: 0.14
+  - _pickupType: 16
+    _pickupIconPrefab: {fileID: 1372975749649910, guid: a350551f44a25904fb59ab81e07d8019, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 8000
+    _spawnWeight: 0.18
+  - _pickupType: 32
+    _pickupIconPrefab: {fileID: 1379160392751361, guid: b1a401c11697fbb43864be9700b11f7c, type: 2}
+    _pickupEnabledState: 0
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 0.29
+  - _pickupType: 64
+    _pickupIconPrefab: {fileID: 1780085240342443, guid: 8efe3dc5aedc73047a5028220eef064e, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: 1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 0.23
+  - _pickupType: 128
+    _pickupIconPrefab: {fileID: 1388212223527957, guid: ebc1ccab1b0c5dc42a509d0d92fd56e9, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: -1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1000
+    _spawnWeight: 0.25
+  - _pickupType: 256
+    _pickupIconPrefab: {fileID: 1095854115605008, guid: 51563d80a4560524fa904ade49a4c85d, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: -2
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 1
+  - _pickupType: 512
+    _pickupIconPrefab: {fileID: 1370755811861169, guid: 62d2be3773695f84da7df53a3a7a62ca, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: -2
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _spawnWeight: 1
+  - _pickupType: 1024
+    _pickupIconPrefab: {fileID: 1626194653589486, guid: 7b4023305e6c139478f9ab0541936a6c, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: -3
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1000
+    _spawnWeight: 1
+  - _pickupType: 2048
+    _pickupIconPrefab: {fileID: 1200611452536799, guid: ef792a6b43a0425428ec9b2943f2334e, type: 2}
+    _pickupEnabledState: 2
+    _spawnPointDifficulty: -1
+    _spawnPointHeight: -1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 400
+    _spawnWeight: 1
+  _pickerDataList:
+  - _pickerType: 1
+    _pickerEnabledState: 0
+    _pickupType: -3841
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 300
+    _probabilityToSpawn: 1
+    _executionOrder: 3
+  - _pickerType: 2
+    _pickerEnabledState: 2
+    _pickupType: 1024
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1000
+    _probabilityToSpawn: 1
+    _executionOrder: 2
+  - _pickerType: 4
+    _pickerEnabledState: 2
+    _pickupType: 512
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 300
+    _probabilityToSpawn: 0.115
+    _executionOrder: 1
+  - _pickerType: 8
+    _pickerEnabledState: 2
+    _pickupType: 256
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1200
+    _probabilityToSpawn: 0.0057
+    _executionOrder: 0
+  - _pickerType: 16
+    _pickerEnabledState: 2
+    _pickupType: 64
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 1200
+    _probabilityToSpawn: 0.01
+    _executionOrder: 0
+  - _pickerType: 32
+    _pickerEnabledState: 1
+    _pickupType: 1
+    _spawnDistanceMinToPreviousMode: 1
+    _spawnDistanceMinToPrevious: 0
+    _probabilityToSpawn: 0.5
+    _executionOrder: 0

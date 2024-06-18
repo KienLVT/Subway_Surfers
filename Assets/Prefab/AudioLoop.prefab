@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1468787028698127}
+  m_IsPrefabParent: 1
+--- !u!1 &1468787028698127
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4583041560192849}
+  - 114: {fileID: 114196117357525166}
+  - 114: {fileID: 114158882729943598}
+  m_Layer: 0
+  m_Name: AudioLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4583041560192849
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468787028698127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4542185476413231}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114196117357525166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468787028698127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd7f55685a96701ac76caab77ca3bb3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  musicPlayer: {fileID: 82249975595749137}
+  menuMusicVolume: 0.25
+  ingameMusicVolume: 0.3
+  jetpackLoop: {fileID: 8300000, guid: 77e1bd9a0d90f7041960ed895cb3018a, type: 3}
+  jetpackVolume: 0.4
+  jetpackMinPitch: 0.8
+  jetpackMaxPitch: 1.1
+  magnetLoop: {fileID: 8300000, guid: 33d7d81bd52bbcf43b0139279eda2fb0, type: 3}
+  magnetVolume: 0.2
+  magnetMinPitch: 0.25
+  magnetMaxPitch: 0.25
+  mysteryBoxOpenSound: {fileID: 8300000, guid: d48fa337ba2557747a40c3ee42f8c844, type: 3}
+  mysteryVolume: 1
+  mysteryRewardShowSound: {fileID: 8300000, guid: 437ef80738cc2da49abedb27fc6c0ee9, type: 3}
+  mysteryRewardVolume: 1
+  celebrationTapSound: {fileID: 8300000, guid: fa8ed682dc3c1cc428a0720834216c74, type: 3}
+  celebrationTapVolume: 1
+  unlockSound: {fileID: 8300000, guid: ab58881d4c5173c4b9d46c051216eeab, type: 3}
+  unlockSoundVolume: 1
+  reviveSound: {fileID: 8300000, guid: 1b95d8e7aa6514c4da5bbc5aa61574ae, type: 3}
+  reviveVolume: 1
+  revivePauseTime: 0.5
+  reviveFadeUpTime: 3
+  fadeDownTime: 0.5
+  pauseTime: 3
+  fadeUpTime: 4
+--- !u!114 &114158882729943598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468787028698127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19da20ebcab864070f1b2aa6174cbb71, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!1 &1354241779563795
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4542185476413231}
+  - 82: {fileID: 82249975595749137}
+  - 169: {fileID: 169028591478813535}
+  - 165: {fileID: 165319790556540458}
+  m_Layer: 0
+  m_Name: Musicplayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4542185476413231
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354241779563795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4583041560192849}
+  m_RootOrder: 0
+--- !u!82 &82249975595749137
+AudioSource:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354241779563795}
+  m_Enabled: 1
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7075b231b8d89a141ab3bb25183cf003, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!169 &169028591478813535
+AudioLowPassFilter:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354241779563795}
+  m_Enabled: 1
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.90909094
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!165 &165319790556540458
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354241779563795}
+  m_Enabled: 1
+  m_CutoffFrequency: 1800
+  m_HighpassResonanceQ: 1

@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1720679078650767}
+  m_IsPrefabParent: 1
+--- !u!1 &1720679078650767
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4760000062475462}
+  - 114: {fileID: 114239621019348323}
+  - 114: {fileID: 114622138668584447}
+  - 114: {fileID: 114633145131422707}
+  m_Layer: 0
+  m_Name: CharacterStatesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4760000062475462
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720679078650767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114239621019348323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720679078650767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826999d595647bb896e7e5e67f7b297b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  slowDownDuration: 0.625
+  slowDownRatio: 1.5
+  tunnelDelta: -20
+  cameraOffset: {x: 0, y: 33, z: -33}
+  cameraOffsetSmoothDuration: 0.7
+  cameraAimOffset: 20
+  cameraFOV: 40
+  smoothCameraXDuration: 0.05
+  ySmoothDuration: 0.1
+  characterChangeTrackLength: 30
+  ySmoothDurationPogostick: 0.01
+  transitionTimeMax: 1.2
+  speedupTransitionTime: 3
+  speedupTransitionTimeLow: 10
+  transitionFromJetpackY:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: -20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transitionFromJetpackZ:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: -15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transitionTimeJetpack: 1
+  transitionFromHeight: 1
+  transitionFromPogostick: 0
+  currentRunPosition: 0
+--- !u!114 &114622138668584447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720679078650767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01240605d3fc85f7973635060fc5772, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  megaHeadstartFOV: 10
+  trasitionTime: 1
+  _endOfFlightPickupPrefab: {fileID: 1848016702107472, guid: c2e2484ba922f7740a96cae3d63b4bef, type: 2}
+  fisso:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 15.523552
+      outSlope: 15.523552
+      tangentMode: 0
+    - time: 0.044358127
+      value: 0.47726646
+      inSlope: 3.505263
+      outSlope: 3.505263
+      tangentMode: 0
+    - time: 0.4984639
+      value: 1
+      inSlope: -0.03218651
+      outSlope: -0.03218651
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isActive: 0
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  cameraOffset: {x: 0, y: 33, z: -33}
+  cameraOffsetSmoothDuration: 1
+  smoothCameraXDuration: 0.01
+  cameraAimOffset: 15
+  cameraFOV: 60
+  ySmoothDuration: 0.2
+  speedup: 2
+  flyHeight: 95
+  coinOffset: 200
+  flyAheadDuration: 1.5
+  stopBeforeLandingChunkDistance: 50
+  stopBeforeLandingChunkDistance1: 30
+  stopBeforeLandingChunkDistance2: 30
+  characterAngle: 45
+  characterChangeTrackLength: 60
+  flyAhead:
+    cameraMovement:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 12.01637
+        outSlope: 12.01637
+        tangentMode: 0
+      - time: 0.16789427
+        value: 0.7699737
+        inSlope: 0.86990345
+        outSlope: 0.86990345
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _powerupType: 0
+--- !u!114 &114633145131422707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720679078650767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b21075b42f0b32bd05b6e262d0fbd99, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rows: 18
+  startRowPosition: 3
+  endRowPosition: 18
+  weightList:
+  - pickupName: jetpackPickup
+    type: 6
+  - pickupName: jumpBooster
+    type: 7
+  - pickupName: doubleScoreMultiplier
+    type: 10
+  - pickupName: magnetBooster
+    type: 8
+  _endOfFlightPickupPrefab: {fileID: 1251762584990909, guid: 7ae4f1b0f19b1d342813fd6d57ecf15c, type: 2}
+  isActive: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  cameraAimOffset: 10
+  jumpHeight: 160
+  jumpDistance: 300
+  characterChangeTrackLength: 60
+  powerType: 18
+  jumpCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.003762931
+        value: 0.00039686123
+        inSlope: 3.0096233
+        outSlope: 3.0096233
+        tangentMode: 0
+      - time: 0.314551
+        value: 0.6847512
+        inSlope: 1.2034596
+        outSlope: 1.2034596
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  cameraCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.088390306
+        value: 0.33244288
+        inSlope: 3.9505568
+        outSlope: 3.9505568
+        tangentMode: 0
+      - time: 0.37136874
+        value: 0.7993873
+        inSlope: 0.43847832
+        outSlope: 0.43847832
+        tangentMode: 0
+      - time: 1
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  cameraAimFollowCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.42067042
+        value: 0.6997083
+        inSlope: 1.4412403
+        outSlope: 1.4412403
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  smoothCameraXDuration: 0.05
+  topPosition: 0.7
+  fadeInPosition: 0.1
+  hangtimePosition: 0.5
+  finalJumpSpeed: 0.1
+  PogostickCoinsManager: {fileID: 0}

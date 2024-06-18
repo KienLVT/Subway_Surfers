@@ -1,0 +1,371 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1919135048977341}
+  m_IsPrefabParent: 1
+--- !u!1 &1919135048977341
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4960109558024458}
+  - 114: {fileID: 114459150703107655}
+  - 114: {fileID: 114817374498561598}
+  - 114: {fileID: 114525796888286766}
+  - 114: {fileID: 114143388374579118}
+  m_Layer: 0
+  m_Name: RigController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4960109558024458
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919135048977341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114459150703107655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919135048977341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c3d2be02deb9a9a1957681f4929030, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  AnimationSpeedUpFactor: 0.5
+--- !u!114 &114817374498561598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919135048977341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ab3ca0a3e49d98ad449166e484144c, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  TargetAnimation: {fileID: 0}
+  AudioClips: []
+  run__LeftFoot:
+    Clip: {fileID: 8300000, guid: 9b6891e642bc3d14f9ae377d2a21e9de, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.06
+    maxVolume: 0.4
+    Rollof: 1
+  run__RightFoot:
+    Clip: {fileID: 8300000, guid: 697eecc1810f4994bbc004d294fc22b2, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.06
+    maxVolume: 0.4
+    Rollof: 1
+  superRun__LeftFoot:
+    Clip: {fileID: 8300000, guid: 987a59934e30cd54b9dd84f665b9820e, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.6
+    maxVolume: 0.95
+    Rollof: 1
+  superRun__RightFoot:
+    Clip: {fileID: 8300000, guid: eb079a5b8455be34a900ce5685719146, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.6
+    maxVolume: 0.95
+    Rollof: 1
+  groundLeft:
+    Clip: {fileID: 8300000, guid: 9b6891e642bc3d14f9ae377d2a21e9de, type: 3}
+    minPitch: 0.8
+    maxPitch: 0.95
+    minVolume: 0.1
+    maxVolume: 0.7
+    Rollof: 1
+  groundRight:
+    Clip: {fileID: 8300000, guid: 697eecc1810f4994bbc004d294fc22b2, type: 3}
+    minPitch: 0.95
+    maxPitch: 1.1
+    minVolume: 0.1
+    maxVolume: 0.7
+    Rollof: 1
+  groundLeft_super:
+    Clip: {fileID: 8300000, guid: 987a59934e30cd54b9dd84f665b9820e, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0
+    maxVolume: 1
+    Rollof: 1
+  groundRight_super:
+    Clip: {fileID: 8300000, guid: eb079a5b8455be34a900ce5685719146, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0
+    maxVolume: 1
+    Rollof: 1
+  jump:
+    Clip: {fileID: 8300000, guid: 62d52211ad276fa4f8ca913f285b26a1, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.6
+    maxVolume: 0.8
+    Rollof: 1
+  roll:
+    Clip: {fileID: 8300000, guid: 99d9acd25617b4b4a99b6fc24550859d, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  landing:
+    Clip: {fileID: 8300000, guid: 364d9fa2cd61e4345b9012fc6f03cd27, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.4
+    maxVolume: 0.6
+    Rollof: 1
+  h_jump:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  h_roll:
+    Clip: {fileID: 8300000, guid: 7b82a15e998f76b45a7e98748f7545b6, type: 3}
+    minPitch: 1.2
+    maxPitch: 1.5
+    minVolume: 0.1
+    maxVolume: 0.4
+    Rollof: 1
+  h_kick:
+    Clip: {fileID: 8300000, guid: 944fbfaac82285b459040ee0f6d69070, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.3
+    maxVolume: 0.6
+    Rollof: 1
+  h_miniKick:
+    Clip: {fileID: 8300000, guid: 944fbfaac82285b459040ee0f6d69070, type: 3}
+    minPitch: 0.6
+    maxPitch: 0.8
+    minVolume: 0
+    maxVolume: 0.23
+    Rollof: 1
+  h_long:
+    Clip: {fileID: 8300000, guid: 3e3f74ba5fe07b546bcae9ec52be9f50, type: 3}
+    minPitch: 0.5
+    maxPitch: 3
+    minVolume: 0.2
+    maxVolume: 0.8
+    Rollof: 1
+  h_mid:
+    Clip: {fileID: 8300000, guid: c4c5c69def5b37041b54d427d723269f, type: 3}
+    minPitch: 0.5
+    maxPitch: 3
+    minVolume: 0.2
+    maxVolume: 0.8
+    Rollof: 1
+  h_short:
+    Clip: {fileID: 8300000, guid: 7b82a15e998f76b45a7e98748f7545b6, type: 3}
+    minPitch: 0.5
+    maxPitch: 3
+    minVolume: 0.3
+    maxVolume: 0.9
+    Rollof: 1
+  h_landingGrind:
+    Clip: {fileID: 8300000, guid: 8185d93269ce51449a364c27e2de8596, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  superJump:
+    Clip: {fileID: 8300000, guid: df09fa08f98f81b4baa3b45184b9c03b, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.7
+    maxVolume: 1
+    Rollof: 1
+  idlePaintSpray:
+    Clip: {fileID: 8300000, guid: 181b0910df8c1cc41af91222506b1a66, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.4
+    minVolume: 0.055
+    maxVolume: 0.12
+    Rollof: 1
+  idlePaintSprayHigh:
+    Clip: {fileID: 8300000, guid: 181b0910df8c1cc41af91222506b1a66, type: 3}
+    minPitch: 1.1
+    maxPitch: 1.4
+    minVolume: 0.055
+    maxVolume: 0.12
+    Rollof: 1
+  idlePaintShake:
+    Clip: {fileID: 8300000, guid: 92cde96fef004e5478c0082274822820, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.1
+    maxVolume: 0.2
+    Rollof: 1
+  deathMovingTrain:
+    Clip: {fileID: 8300000, guid: a7b8a49699cb81b4d88c0fe817db0f85, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.8
+    maxVolume: 0.9
+    Rollof: 1
+  deathBodyfall:
+    Clip: {fileID: 8300000, guid: b462acd9a8c77d74e97596429f4de125, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.8
+    maxVolume: 0.9
+    Rollof: 1
+  audioStateLoop: {fileID: 0}
+  playPaintSound: 1
+--- !u!114 &114525796888286766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919135048977341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b7af6ccc8a793c420cfd81b685fa69, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  TargetObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Actions:
+  - clip: idlePaintOld
+    KeyFrame: 1
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 12
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 150
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 156
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 200
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 212
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 350
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 235
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 240
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 237
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 310
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 315
+    state: 0
+  - clip: idlePaintOld
+    KeyFrame: 350
+    state: 1
+  - clip: idlePaintOld
+    KeyFrame: 360
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 5
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 22
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 114
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 119
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 136
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 148
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 207
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 225
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 271
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 279
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 304
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 321
+    state: 0
+  - clip: idlePaint
+    KeyFrame: 518
+    state: 1
+  - clip: idlePaint
+    KeyFrame: 534
+    state: 0
+--- !u!114 &114143388374579118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1919135048977341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247f7c24122d1368ec0e9a314f9a9c2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  PlayIdleAnimations: 0
+  paused: 0
+  topRunStart: {fileID: 7400000, guid: e762409ec378b554a8abe1bdc853ec3f, type: 2}
+  topRunIdles:
+  - {fileID: 7400000, guid: 7657e9f776308b14eb3218ff39018dbd, type: 2}
+  topRunHandMiss:
+  - {fileID: 7400000, guid: be8d84d797c984d439d08736a10fda33, type: 2}
+  topRunHandHit:
+  - clip: {fileID: 7400000, guid: fb8406d7b8cc43543a7ea64674b7f89e, type: 2}
+    propability: 40
+  - clip: {fileID: 7400000, guid: 3d87d4f681216fc46bb4b5fd4133b512, type: 2}
+    propability: 20
+  - clip: {fileID: 7400000, guid: 3805e209e937c854c9117b43ea302293, type: 2}
+    propability: 40

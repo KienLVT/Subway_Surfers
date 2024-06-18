@@ -1,0 +1,1334 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1755044096702308}
+  m_IsPrefabParent: 1
+--- !u!1 &1755044096702308
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4390247526622445}
+  - 114: {fileID: 114965881640599142}
+  - 114: {fileID: 114607094420855994}
+  - 114: {fileID: 114995879341850323}
+  - 114: {fileID: 114405727512538473}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4390247526622445
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755044096702308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4879065732759364}
+  - {fileID: 4760658638217312}
+  - {fileID: 4260058030799685}
+  - {fileID: 4982205544483448}
+  - {fileID: 4547502211190656}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114965881640599142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755044096702308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e40f204e270f2780bde2ad8fc9ffaf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  highSpeedFOV: 10
+  hotrodSpeedInfo:
+    min: 135
+    max: 230
+    rampUpDuration: 180
+  characterModelPreviewFactoryPrefab: {fileID: 1126729311558407, guid: 1bfefa4ea15e99a4381c1650ab4378b8, type: 2}
+  hoverboardFactoryPrefab: {fileID: 1514982552197793, guid: 69851d5f112479240a0a46fda41716ac, type: 2}
+  highSpeedInfo:
+    min: 160
+    max: 240
+    rampUpDuration: 180
+  trasitionTime: 0.5
+  speedFOV: 5
+  isDead: 0
+  ingameTouchDetection: 1
+  canRevive: 0
+  reviveWaitTime: 3
+  currentSpeed: 0
+  currentLevelSpeed: 30
+  swipe:
+    distanceMin: 0.1
+    doubleTapDuration: 0.3
+  speed:
+    min: 110
+    max: 220
+    rampUpDuration: 180
+  backToCheckpointDelayTime: 0.5
+  backToCheckpointZoomTime: 1
+  audioStateLoop: {fileID: 31582, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  DieSound:
+    Clip: {fileID: 8300000, guid: b97f52036461c654abd60e12a2c6dd1b, type: 3}
+    minPitch: 0.9
+    maxPitch: 1
+    minVolume: 0.8
+    maxVolume: 0.9
+    Rollof: 1
+  awakeDone: 0
+  isReadyForSlideinPowerups: 0
+  wasButtonClicked: 0
+  track: {fileID: 0}
+  startCharacterName:
+  startCharacterTheme: 0
+  pogoLevel: 0
+  pogoJumpsLeft: 0
+  introAnimation: {fileID: 12140, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  character: {fileID: 0}
+--- !u!114 &114607094420855994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755044096702308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2eb2bcb509afd3a88a44d75ca163953, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  partLength: 700
+  smoothTime: 10
+  materials: []
+  distortion: {x: -0.05, y: -0.03, z: 0}
+  day:
+    backgroundColor: {r: 0.7372549, g: 0.9019608, b: 0.9647059, a: 0}
+    materialColor: {r: 1, g: 1, b: 1, a: 1}
+  night:
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    materialColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114995879341850323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755044096702308}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0320621344b7ff9d816fb2c448decb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  skyLength: 5000
+  cloudDistance: 300
+  numberOfClouds: 100
+  cloudSize: 70
+  cloudPrefab: {fileID: 0}
+--- !u!114 &114405727512538473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755044096702308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a88eea079c063a3723a1ad5461cae72, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  audioStateLoop: {fileID: 31582, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  WaitForParticlesDelay: 0.144
+  RemoveObstaclesDistance: 250
+  reviveParticle: {fileID: 18170, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  ReviveFX: {fileID: 5065, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  ReviveAnimation: {fileID: 18119, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  ReviveAnimationClip: {fileID: 7400000, guid: d4321b0cbffb1ab4da76ace765cd8546, type: 2}
+--- !u!1 &1146409251419352
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4879065732759364}
+  - 114: {fileID: 114348802004554158}
+  m_Layer: 0
+  m_Name: Coin Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4879065732759364
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146409251419352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 16.97412, z: 6097.785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4390247526622445}
+  m_RootOrder: 0
+--- !u!114 &114348802004554158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146409251419352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899cfbde4e03b7829a6cad8d98836f9e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  coinPrefab: {fileID: 1127682595961859, guid: 0441576d586cc5d43a3e7c736202ed1d, type: 2}
+  numDeletedPerCleanup: 4
+  numPrepool: 0
+  cleanupIntervalInSeconds: 5
+  _coinsInPool: []
+--- !u!1 &1512776311303626
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4760658638217312}
+  - 114: {fileID: 114761086149256656}
+  m_Layer: 0
+  m_Name: CoinLineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4760658638217312
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512776311303626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.80000067, z: 257.85562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4390247526622445}
+  m_RootOrder: 1
+--- !u!114 &114761086149256656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512776311303626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259e8f30f1ee5ed824c4fbb2bb6c3fd0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!1 &1550927833837900
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4260058030799685}
+  - 114: {fileID: 114719965142492253}
+  m_Layer: 0
+  m_Name: PickupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4260058030799685
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550927833837900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.181242, y: -0.608511, z: -7.5375977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4390247526622445}
+  m_RootOrder: 2
+--- !u!114 &114719965142492253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550927833837900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88eaa16a11bdd50d2a925fa6fc09f9e3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnSetups:
+  - prefab: {fileID: 1498549343621829, guid: 1b8c4110e1cfb4243a18f2bca7ed50d9, type: 2}
+    canSpawn: 0
+    SPAWN_MINIMUM_TIME: 0
+    SPAWN_MAXIMUM_TIME: 720
+    SPAWN_PROBABILTY: 0.0023
+    SPAWN_PREFAB_TYPE: 1
+  - prefab: {fileID: 1183730846319931, guid: 8ef0c8f91d1b17f4fa79284970597ea3, type: 2}
+    canSpawn: 0
+    SPAWN_MINIMUM_TIME: 5
+    SPAWN_MAXIMUM_TIME: 240
+    SPAWN_PROBABILTY: 0.027
+    SPAWN_PREFAB_TYPE: 0
+  _minSpawnDistance: 500
+  _debug: 0
+--- !u!1 &1761453465289767
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4982205544483448}
+  - 114: {fileID: 114299483478926295}
+  - 114: {fileID: 114312767011861543}
+  - 114: {fileID: 114986634314157662}
+  - 114: {fileID: 114645753483441809}
+  - 114: {fileID: 114336801131716980}
+  - 114: {fileID: 114701251825704437}
+  - 114: {fileID: 114849096097220495}
+  - 114: {fileID: 114500524436317482}
+  - 114: {fileID: 114175027910935176}
+  - 114: {fileID: 114043423872844308}
+  - 114: {fileID: 114782090753451580}
+  m_Layer: 0
+  m_Name: Powerups
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4982205544483448
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14521.958, y: -4415.578, z: -11989.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4390247526622445}
+  m_RootOrder: 3
+--- !u!114 &114299483478926295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426aa2f618375e429e981f994ab9d79a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pullSpeed: 150
+  audioStateLoop: {fileID: 31582, guid: 8f6b16bb3bbcb354a8a27430d883df54, type: 2}
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114312767011861543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a362610b01eba5b858490cc93ab0170d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isActive: 0
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  timeActiveInARow: 0
+--- !u!114 &114986634314157662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d92158b9558c69d507115166fa572f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ratio: 0
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114645753483441809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c39aa08e08e3f20be270e2564b98363, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  currentHoverboard: {fileID: 0}
+  hoverboardSelector:
+  - boardType: 0
+    hoverboardPrefab: {fileID: 1532172462695588, guid: 7c1d3e609981feb4bbedfbb3499aaf60, type: 2}
+    customSets: []
+  - boardType: 1
+    hoverboardPrefab: {fileID: 1818216857914839, guid: cb228b9cf71f1f04dbeb281116188980, type: 2}
+    customSets:
+    - ability: 1
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 2
+    hoverboardPrefab: {fileID: 1356568384985720, guid: b6361287e98d70f468c8d803759ec678, type: 2}
+    customSets:
+    - ability: 2
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 3
+    hoverboardPrefab: {fileID: 1932946601876729, guid: fb5a5790ae2a63d44bb5fd1075b96a46, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1915383430734851, guid: d1abf7b669e5d3443be523d81b6de24c, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 0
+    - ability: 5
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1312436699006803, guid: e91c5731766199840a7c8201ca14dd5e, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 0
+    - ability: 1
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1138357854257440, guid: c93a95def7385b746abb874587de7e19, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 4
+    hoverboardPrefab: {fileID: 1938270208523742, guid: 6ef622cf4f720774eb43482338f618ad, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 2
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1060300630131243, guid: 96e64e56ceeb5f04cbf20e791260f2ce, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 6
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1020592349232267, guid: 15afec1c2cd6b70439a0803444f17376, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 5
+    hoverboardPrefab: {fileID: 1184546571028533, guid: 475d7ed192a41bc4cb0e353fd04e254f, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 7
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1672330182025176, guid: 1a84225e8f462b340a40f8c58bb2a415, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 1
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1105333810022973, guid: 169d8e24a824b524b90894ee0426e6fb, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 0
+  - boardType: 6
+    hoverboardPrefab: {fileID: 1974915351821634, guid: 6c0361a060de87a43afed2ebca34e00e, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 8
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1998502254962024, guid: 6dce618244fc7b14fa6d7ae287df89d3, type: 2}
+      VanityFxPrefab: {fileID: 1963990355892946, guid: 9c5239b346a640f47b74667daf3b52c3, type: 2}
+      VanityMenuFxPrefab: {fileID: 1115705443589232, guid: 2f8c8d9d8841c2644a4557f83290d125, type: 2}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 5
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1264660957515894, guid: d2471bf6c61c5104ab641aa5da25a0b1, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 7
+    hoverboardPrefab: {fileID: 1654105021014559, guid: 31d5d0eec86d3914a9316b5081ea5bf7, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 8
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1434682774047886, guid: 66ffdd61c7c097d42a2262972fee21e1, type: 2}
+      VanityFxPrefab: {fileID: 1641633520053868, guid: dfb2a4fc5cc4895439d6896a695915a4, type: 2}
+      VanityMenuFxPrefab: {fileID: 1736284464847492, guid: b21f2b812ec9506498fd6666dacdb830, type: 2}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 6
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1151784762423896, guid: c8d13a18ae316824f97f9440e72cec86, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 8
+    hoverboardPrefab: {fileID: 1191242889510471, guid: 3c1b62c965276b745af4a8594d5c349b, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1882133790970506, guid: 597002de0ad48f946835842b0fddd8c2, type: 2}
+      VanityFxPrefab: {fileID: 1235200641195220, guid: 64912f03ad471e1468b69b098029edcb, type: 2}
+      VanityMenuFxPrefab: {fileID: 1213290061115575, guid: aae2373877735ec4983f074d58c86960, type: 2}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 1
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1998329031276392, guid: c7e3484a218b7d14e93cbd46e226e228, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 9
+    hoverboardPrefab: {fileID: 1410346073420530, guid: 15a91d98f04fb094ea7a1e044041c407, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 5
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1204153029185437, guid: f535392e9efe28d4d8639702b14fc2cf, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1837308431145267, guid: 8724d45c1d842cf44aea1e2b1c72aa57, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 10
+    hoverboardPrefab: {fileID: 1382880534718454, guid: d9c40f2a0ace1dd46a96713be96144c7, type: 2}
+    customSets: []
+  - boardType: 11
+    hoverboardPrefab: {fileID: 1112440495196465, guid: 17e3c1b27a6fe31408ac0091b44639f2, type: 2}
+    customSets:
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 12
+    hoverboardPrefab: {fileID: 1397424660994007, guid: f64878306ccc143448e1acb26aadb4b7, type: 2}
+    customSets: []
+  - boardType: 13
+    hoverboardPrefab: {fileID: 1688310732460112, guid: f784a4be35135e54caced0cf04156bfb, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 5
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1097279230563890, guid: b16f834fd5304b04b8a33efc7bc8b562, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 2
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1235872642788510, guid: d5ca4202e36f58847991ab6f27cd97d3, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 14
+    hoverboardPrefab: {fileID: 1925169668771134, guid: d9c66420206a289479019f0f3eb1d5fc, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 8
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1640741605090203, guid: 86c1458f9d84baf489610e8e7d713508, type: 2}
+      VanityFxPrefab: {fileID: 1968202649122139, guid: fdd9c211f710c0140a48f79eb3f22ea6, type: 2}
+      VanityMenuFxPrefab: {fileID: 1470527627542929, guid: f9e8075b98e3a2b408844e8403a50399, type: 2}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 3
+      baseModelPrefab: {fileID: 1764090922400843, guid: 7f0ee2643af954f4eb00a6d2aca03427, type: 2}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 15
+    hoverboardPrefab: {fileID: 1169595431673122, guid: 840cfd73442ebc44a8adc084e2d97dbd, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 7
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1423882732550836, guid: 6f93506ec0290e54ca407ff5760de71a, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1971647085583269, guid: d2fe264239c50644ab58734b5a4ccc6b, type: 2}
+      VanityFxPrefab: {fileID: 1932199474600683, guid: 30618856e0ba0f443a90600184fb6470, type: 2}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 16
+    hoverboardPrefab: {fileID: 1462247313698145, guid: 696083a571e6af14c826e8404798f4af, type: 2}
+    customSets: []
+  - boardType: 18
+    hoverboardPrefab: {fileID: 1773834209578425, guid: 625765ce69deaf244b52df299735f09c, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1369399474997915, guid: dd67ad1c299466d43b5ad8601937e3bd, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1370745136747873, guid: 18cfe04b072d32349be2a63d4bdb9a4d, type: 2}
+      VanityFxPrefab: {fileID: 1034539703549454, guid: be21d528054c9cb4d9870f508d2d6de1, type: 2}
+      VanityMenuFxPrefab: {fileID: 1599043626556203, guid: c1a9f8f407e7de043aa08e865017a516, type: 2}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+    - ability: 6
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1291175110746027, guid: fefebc169c6078b4cad16ff6f0cafcb7, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 1
+  - boardType: 17
+    hoverboardPrefab: {fileID: 1137599966146982, guid: 39cb7e363df0d5f4eae23dd216b41ae2, type: 2}
+    customSets: []
+  - boardType: 19
+    hoverboardPrefab: {fileID: 1679969031058009, guid: 4e2aa55e36637ed47b843361c1a16314, type: 2}
+    customSets: []
+  - boardType: 20
+    hoverboardPrefab: {fileID: 1971908866205469, guid: 5959178ddcefddd449c6714de6aa001d, type: 2}
+    customSets: []
+  - boardType: 21
+    hoverboardPrefab: {fileID: 1135244059711525, guid: d8901c10cd657d4419d63829461f3d17, type: 2}
+    customSets:
+    - ability: 3
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 22
+    hoverboardPrefab: {fileID: 1262651608497192, guid: c39544f03a1a3384a97cffcf85f7cc28, type: 2}
+    customSets: []
+  - boardType: 23
+    hoverboardPrefab: {fileID: 1086189638303580, guid: ecd9e2d239399f74e9745340e4d606fb, type: 2}
+    customSets: []
+  - boardType: 24
+    hoverboardPrefab: {fileID: 1596507560162245, guid: 0777a75ebf77f5b458298dd1fbab8daa, type: 2}
+    customSets: []
+  - boardType: 25
+    hoverboardPrefab: {fileID: 1637283376853721, guid: bab9add53b939764db1e9a68631649b1, type: 2}
+    customSets: []
+  - boardType: 26
+    hoverboardPrefab: {fileID: 1663470900996764, guid: da5265b63e72b7041a99265dc34a4e3f, type: 2}
+    customSets: []
+  - boardType: 27
+    hoverboardPrefab: {fileID: 1540075074235796, guid: e57cd2ed48f8cd94099c68a45a4dbfae, type: 2}
+    customSets: []
+  - boardType: 28
+    hoverboardPrefab: {fileID: 1996236331600850, guid: b930ae3064a6b124da676f9b1d630dc2, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 8
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1362787474995351, guid: 453d5cd2391db234b87a900fb5e2dc54, type: 2}
+      VanityFxPrefab: {fileID: 1127989274013535, guid: a02e35fa4e80b8d4285d9589fc788b89, type: 2}
+      VanityMenuFxPrefab: {fileID: 1717929535533300, guid: 2a554f6dc5cdb68438f4097dac5a7a03, type: 2}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 1
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 1587421524423735, guid: 7e755f298a63b1746a8cdf7f225e9a17, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  - boardType: 29
+    hoverboardPrefab: {fileID: 1429574953406144, guid: dd92a6649149a584f9908d0632b39419, type: 2}
+    customSets: []
+  - boardType: 30
+    hoverboardPrefab: {fileID: 1013305907194899, guid: ee366d5a2c7d7284db501ae92a773851, type: 2}
+    customSets: []
+  - boardType: 31
+    hoverboardPrefab: {fileID: 1312912913553765, guid: d667ebccfbaba4140b5ff15ab2cfbfe2, type: 2}
+    customSets:
+    - ability: 7
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 32
+    hoverboardPrefab: {fileID: 1338932124612620, guid: 79d5e3bf8d5317d44a0e230b09450402, type: 2}
+    customSets:
+    - ability: 6
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 1
+      useSuperSneakers: 1
+  - boardType: 35
+    hoverboardPrefab: {fileID: 1419024778941886, guid: a8bda210141109a4aa17046ac122bc09, type: 2}
+    customSets: []
+  - boardType: 33
+    hoverboardPrefab: {fileID: 1972617731769516, guid: e9de708b6b1916946a5e5d92e25ac079, type: 2}
+    customSets: []
+  - boardType: 34
+    hoverboardPrefab: {fileID: 1040191036199739, guid: bf0eb264b1ea9584c8fbe08d8c0f5032, type: 2}
+    customSets: []
+  - boardType: 36
+    hoverboardPrefab: {fileID: 1452617381748883, guid: 35ee1d83ad306da4e9929c03c3e2dea0, type: 2}
+    customSets: []
+  - boardType: 37
+    hoverboardPrefab: {fileID: 1661079105588185, guid: 9fd3ddf72705cf34a8d9d0d06b43ea04, type: 2}
+    customSets: []
+  - boardType: 38
+    hoverboardPrefab: {fileID: 1860724101175811, guid: 22636704c36089c41904ea4b26cd4fb1, type: 2}
+    customSets: []
+  - boardType: 39
+    hoverboardPrefab: {fileID: 1472799186539030, guid: 106b1d3c5cb84b348b3fc802ad00b99b, type: 2}
+    customSets: []
+  - boardType: 40
+    hoverboardPrefab: {fileID: 1422811975930989, guid: 2a68efe1211b16f4db077bae14ed9e54, type: 2}
+    customSets: []
+  - boardType: 41
+    hoverboardPrefab: {fileID: 1471550624135843, guid: 7e7d62e481a8d0f458b9e827ab4a6604, type: 2}
+    customSets: []
+  - boardType: 42
+    hoverboardPrefab: {fileID: 1179786386173845, guid: fcd8718e3b1fcaa48bb5aacc29bc289a, type: 2}
+    customSets: []
+  - boardType: 43
+    hoverboardPrefab: {fileID: 1025639125494808, guid: b99e6febc44140543ab876bbf55e5679, type: 2}
+    customSets: []
+  - boardType: 44
+    hoverboardPrefab: {fileID: 1744553617952328, guid: a97d7879ed117e04a86e7e9338dbfbb1, type: 2}
+    customSets: []
+  - boardType: 45
+    hoverboardPrefab: {fileID: 1866835027770258, guid: a12a7b68ae4be2d48a5195a5dcc3b647, type: 2}
+    customSets: []
+  - boardType: 46
+    hoverboardPrefab: {fileID: 1420567770421395, guid: cb8be7fa9ef7e374d95f9a7b0b6a5632, type: 2}
+    customSets: []
+  - boardType: 47
+    hoverboardPrefab: {fileID: 1739464944169559, guid: d4f2b6daa4e5cb14caa3e34c49320cc3, type: 2}
+    customSets: []
+  - boardType: 48
+    hoverboardPrefab: {fileID: 1697389981548038, guid: 6656099d0ce37f5438effb6f0fe23ebc, type: 2}
+    customSets: []
+  - boardType: 49
+    hoverboardPrefab: {fileID: 1813943589116486, guid: e9f7486bd93fc0c44b1c841c828ca471, type: 2}
+    customSets: []
+  - boardType: 50
+    hoverboardPrefab: {fileID: 1204821973585712, guid: 19692a79c8a4eb444bebbe1b876cf8f3, type: 2}
+    customSets: []
+  - boardType: 51
+    hoverboardPrefab: {fileID: 1798069622088721, guid: 6152a026e10f1d04caa115e28475f805, type: 2}
+    customSets: []
+  - boardType: 52
+    hoverboardPrefab: {fileID: 1173718100865410, guid: 2796f1854dd93da4d91b37b9a4375175, type: 2}
+    customSets: []
+  - boardType: 53
+    hoverboardPrefab: {fileID: 1845098440068691, guid: 6121d287dc56f09418e9ccdb55e4c674, type: 2}
+    customSets: []
+  - boardType: 54
+    hoverboardPrefab: {fileID: 1158903705906658, guid: 667bb550cd4a19c4e87443bd5c0b3663, type: 2}
+    customSets: []
+  - boardType: 55
+    hoverboardPrefab: {fileID: 1886660354722684, guid: 05ca9bc6e1d812747b3aefebfa5d9abc, type: 2}
+    customSets: []
+  - boardType: 56
+    hoverboardPrefab: {fileID: 1785580942307396, guid: 1335dbadc49667e459da85be149b69b7, type: 2}
+    customSets: []
+  - boardType: 57
+    hoverboardPrefab: {fileID: 1360500264817015, guid: ec8d5a62669b4ec4b89c8a04b793f3e4, type: 2}
+    customSets:
+    - ability: 0
+      baseModelPrefab: {fileID: 0}
+      modelPrefab: {fileID: 0}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+    - ability: 6
+      baseModelPrefab: {fileID: 1200292493034239, guid: 2b96149e46a115143ad73bf216777fff, type: 2}
+      modelPrefab: {fileID: 1718806212122386, guid: 0aa7d498afc021b44b6afe081334f54a, type: 2}
+      VanityFxPrefab: {fileID: 0}
+      VanityMenuFxPrefab: {fileID: 0}
+      useDefaultmodel: 0
+      useSuperSneakers: 0
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  cooldownDstance: 116
+  slowMotionDistance: 90
+  slowDownToScale: 0.3
+  WaitForParticlesDelay: 0.14
+  RemoveObstaclesDistance: 250
+  isActive: 0
+  _isInCooldown: 0
+  CrashSound:
+    Clip: {fileID: 8300000, guid: 2a9587b7e5f365447aa0537ae89c7d72, type: 3}
+    minPitch: 0.9
+    maxPitch: 1
+    minVolume: 0.5
+    maxVolume: 0.6
+    Rollof: 1
+  StartSound:
+    Clip: {fileID: 8300000, guid: b5384624ad6ddb64292dd69a47426ca2, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114336801131716980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0cdf500b1b3a577528d3350fb1000a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  coinPrefab: {fileID: 1014181758764370, guid: 22940a6a4cd18ac44a1ff2c54036a486, type: 2}
+  numberOfCoins: 200
+  stayInTrackDistance: 60
+  coinDistance: 30
+--- !u!114 &114701251825704437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b9f1a9d8637d42ef6440481832a6f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  coinPrefab: {fileID: 1014181758764370, guid: 22940a6a4cd18ac44a1ff2c54036a486, type: 2}
+--- !u!114 &114849096097220495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55c0514d76a60f061a076030579fdcf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ratio: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114500524436317482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77c0a0326f4153232f14411f07b4b84, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ratio: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114175027910935176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b589f6025adc4809060c28e1e7183a6d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ratio: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114043423872844308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec53b23abaaab012bfab426cfd0309e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ratio: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+--- !u!114 &114782090753451580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761453465289767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a0b183d79762212a301c06fe72e487, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pullSpeed: 200
+--- !u!1 &1837072184265580
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4547502211190656}
+  - 114: {fileID: 114682179525337868}
+  - 114: {fileID: 114849079188101667}
+  - 114: {fileID: 114045671288316583}
+  m_Layer: 0
+  m_Name: CharacterStatesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4547502211190656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837072184265580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4390247526622445}
+  m_RootOrder: 4
+--- !u!114 &114682179525337868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837072184265580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826999d595647bb896e7e5e67f7b297b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  slowDownDuration: 0.625
+  slowDownRatio: 1.5
+  tunnelDelta: -20
+  cameraOffset: {x: 0, y: 33, z: -33}
+  cameraOffsetSmoothDuration: 0.7
+  cameraAimOffset: 20
+  cameraFOV: 40
+  smoothCameraXDuration: 0.05
+  ySmoothDuration: 0.1
+  characterChangeTrackLength: 30
+  ySmoothDurationPogostick: 0.01
+  transitionTimeMax: 1.2
+  speedupTransitionTime: 3
+  speedupTransitionTimeLow: 10
+  transitionFromJetpackY:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: -20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transitionFromJetpackZ:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: -15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transitionTimeJetpack: 1
+  transitionFromHeight: 1
+  transitionFromPogostick: 0
+  currentRunPosition: 0
+--- !u!114 &114849079188101667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837072184265580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01240605d3fc85f7973635060fc5772, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  megaHeadstartFOV: 10
+  trasitionTime: 1
+  _endOfFlightPickupPrefab: {fileID: 1848016702107472, guid: c2e2484ba922f7740a96cae3d63b4bef, type: 2}
+  fisso:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 15.523552
+      outSlope: 15.523552
+      tangentMode: 0
+    - time: 0.044358127
+      value: 0.47726646
+      inSlope: 3.505263
+      outSlope: 3.505263
+      tangentMode: 0
+    - time: 0.4984639
+      value: 1
+      inSlope: -0.03218651
+      outSlope: -0.03218651
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isActive: 0
+  powerDownSound:
+    Clip: {fileID: 8300000, guid: ebcf45c276d5f7e45bd646a756cb69bc, type: 3}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  cameraOffset: {x: 0, y: 33, z: -33}
+  cameraOffsetSmoothDuration: 1
+  smoothCameraXDuration: 0.01
+  cameraAimOffset: 15
+  cameraFOV: 60
+  ySmoothDuration: 0.2
+  speedup: 2
+  flyHeight: 95
+  coinOffset: 200
+  flyAheadDuration: 1.5
+  stopBeforeLandingChunkDistance: 50
+  stopBeforeLandingChunkDistance1: 30
+  stopBeforeLandingChunkDistance2: 30
+  characterAngle: 45
+  characterChangeTrackLength: 60
+  flyAhead:
+    cameraMovement:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 12.01637
+        outSlope: 12.01637
+        tangentMode: 0
+      - time: 0.16789427
+        value: 0.7699737
+        inSlope: 0.86990345
+        outSlope: 0.86990345
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _powerupType: 0
+--- !u!114 &114045671288316583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837072184265580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b21075b42f0b32bd05b6e262d0fbd99, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rows: 18
+  startRowPosition: 3
+  endRowPosition: 18
+  weightList:
+  - pickupName: jetpackPickup
+    type: 6
+  - pickupName: jumpBooster
+    type: 7
+  - pickupName: doubleScoreMultiplier
+    type: 10
+  - pickupName: magnetBooster
+    type: 8
+  _endOfFlightPickupPrefab: {fileID: 1251762584990909, guid: 7ae4f1b0f19b1d342813fd6d57ecf15c, type: 2}
+  isActive: 0
+  powerDownSound:
+    Clip: {fileID: 0}
+    minPitch: 0.8
+    maxPitch: 1.1
+    minVolume: 0.5
+    maxVolume: 0.7
+    Rollof: 1
+  cameraAimOffset: 10
+  jumpHeight: 160
+  jumpDistance: 300
+  characterChangeTrackLength: 60
+  powerType: 18
+  jumpCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.003762931
+        value: 0.00039686123
+        inSlope: 3.0096233
+        outSlope: 3.0096233
+        tangentMode: 0
+      - time: 0.314551
+        value: 0.6847512
+        inSlope: 1.2034596
+        outSlope: 1.2034596
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  cameraCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.088390306
+        value: 0.33244288
+        inSlope: 3.9505568
+        outSlope: 3.9505568
+        tangentMode: 0
+      - time: 0.37136874
+        value: 0.7993873
+        inSlope: 0.43847832
+        outSlope: 0.43847832
+        tangentMode: 0
+      - time: 1
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  cameraAimFollowCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0.42067042
+        value: 0.6997083
+        inSlope: 1.4412403
+        outSlope: 1.4412403
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  smoothCameraXDuration: 0.05
+  topPosition: 0.7
+  fadeInPosition: 0.1
+  hangtimePosition: 0.5
+  finalJumpSpeed: 0.1
+  PogostickCoinsManager: {fileID: 0}
