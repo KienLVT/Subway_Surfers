@@ -4,43 +4,80 @@ using UnityEngine;
 
 public class Jetpack : MonoBehaviour
 {
-    [SerializeField] private float jetpackDuration = 5f;
-    [SerializeField] private float upForce = 5f;
-    private bool jetActive = false;
-    [SerializeField] private float flyTime = 5f;
+    public float jetpackDuration = 5f;      // Duration of the jetpack powerup
+    public float jetpackForce = 10f;        // Upward force applied by the jetpack
+    public ParticleSystem jetpackEffect;    // Visual effect for the jetpack
+    public float forwardSpeed = 5f;         // Speed at which the player moves forward while flying
 
-    private void OnTriggerEnter(Collider other)
+    private bool isFlying = false;
+    private float timer = 0f;
+    private GameObject player;
+    private Rigidbody playerRigidbody;
+    private Animator playerAnimator;
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            ActivateJetpack(other.gameObject);
-            Destroy(gameObject);
+            player = other.gameObject;
+            playerRigidbody = player.GetComponent<Rigidbody>();
+            playerAnimator = player.GetComponent<Animator>();
+            ActivateJetpack();
+            Destroy(gameObject); // Remove the powerup object
         }
     }
 
-    private void Update()
+    void Update()
     {
-        flyTime = Time.time;
-        if (flyTime >= jetpackDuration)
+        if (isFlying)
         {
-            DeactivatejetPack();
+            timer += Time.deltaTime;
+            if (timer >= jetpackDuration)
+            {
+                DeactivateJetpack();
+            }
         }
     }
 
-    private void ActivateJetpack(GameObject player)
+    void ActivateJetpack()
     {
-        jetActive = true;
+        isFlying = true;
+        timer = 0f;
 
-        Rigidbody rb = player.GetComponent<Rigidbody>();
-        if (rb != null)
+        if (jetpackEffect != null)
         {
-            rb.AddForce(Vector3.up * upForce, ForceMode.Impulse);
+            Instantiate(jetpackEffect, player.transform.position, Quaternion.identity, player.transform);
+        }
+
+        // Enable flying animation
+        playerAnimator.SetBool("IsFlying", true);
+
+        // Reset vertical velocity and apply initial upward force
+        playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, 0, playerRigidbody.velocity.z);
+        playerRigidbody.AddForce(Vector3.up * jetpackForce, ForceMode.VelocityChange);
+    }
+
+    void FixedUpdate()
+    {
+        if (isFlying)
+        {
+            // Continuously apply upward force to simulate flight
+            playerRigidbody.AddForce(Vector3.up * jetpackForce * Time.fixedDeltaTime, ForceMode.Acceleration);
+
+            // Move the player forward along the Z-axis
+            playerRigidbody.MovePosition(player.transform.position + Vector3.forward * forwardSpeed * Time.fixedDeltaTime);
         }
     }
-    
-    private void DeactivatejetPack()
+
+    void DeactivateJetpack()
     {
-        jetActive = false;
-        flyTime = 0f;
+        isFlying = false;
+        timer = 0f;
+
+        // Disable flying animation
+        playerAnimator.SetBool("IsFlying", false);
+
+        // Optionally, stop the jetpack effect here if needed
+        // If you have a particle effect, you might want to stop it here
     }
 }
